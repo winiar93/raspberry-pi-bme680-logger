@@ -4,9 +4,9 @@ with data upload to google sheets using api.
 python 3.7.3
 
 libs:
-- bme680 
-- csv
-- time
+- bme680
+- google.oauth2 
+
 
 
 Recommended links:
