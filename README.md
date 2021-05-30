@@ -1,5 +1,5 @@
-# raspberry-pi-zero-bme680-logger
-bme 680 sensor logger based on raspberry pi 3
+# raspberry-pi-bme680-logger
+bme 680 sensor logger based on raspberry pi 4
 python 3.7.3
 
 libs:
