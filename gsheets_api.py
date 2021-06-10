@@ -7,7 +7,7 @@ from google.oauth2.credentials import Credentials
 import psutil
 from google.oauth2 import service_account
 #,data2,data3,data4
-def push_to_google_sheets(data1,data2,data3,data4):
+def push_to_google_sheets(data1,data2,data3,data4,data5,data6):
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
     SERVICE_ACCOUNT_FILE = 'keys.json'
 

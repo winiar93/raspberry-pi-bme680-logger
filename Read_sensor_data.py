@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-from gsheets_api import push_to_google_sheets
 import bme680
 import time
-
+from gpiozero import CPUTemperature
+from sql_connection import insert_sensor_data
 print("""read-all.py - Displays temperature, pressure, humidity, and gas.
 
 Press Ctrl+C to exit!
@@ -46,7 +46,7 @@ for name in dir(sensor.data):
 sensor.set_gas_heater_temperature(320)
 sensor.set_gas_heater_duration(150)
 sensor.select_gas_heater_profile(0)
-
+cpu = CPUTemperature()
 # Up to 10 heater profiles can be configured, each
 # with their own temperature and duration.
 # sensor.set_gas_heater_profile(200, 150, nb_profile=1)
@@ -65,15 +65,16 @@ try:
                 print('{0},{1} Ohms'.format(
                     output,
                     sensor.data.gas_resistance))
-                push_to_google_sheets(
+                insert_sensor_data(
                         sensor.data.temperature,
                         sensor.data.pressure,
                         sensor.data.humidity,
-                        sensor.data.gas_resistance)
+                        sensor.data.gas_resistance,
+                        cpu.temperature)
             else:
                 print(output)
                 
-        time.sleep(30)
+        time.sleep(5)
 
 except KeyboardInterrupt:
     pass
