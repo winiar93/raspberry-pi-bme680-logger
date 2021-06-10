@@ -6,7 +6,7 @@ from psycopg2 import connect, sql
 import psycopg2
 
 def full_read_data():
-    con = psycopg2.connect(user="pi",dbname="pi",password="1993")
+    con = psycopg2.connect(user="pi",dbname="pi",password="*")
     cursor = con.cursor()
     cursor.execute("SELECT * FROM dane")
     dane = cursor.fetchall()
@@ -17,7 +17,7 @@ def full_read_data():
 #class DataBaseConnection():z,x,c,v,b,n
 
 def insert_sensor_data(t,p,h,g,c):
-    con = psycopg2.connect(user="pi",dbname="pi",password="1993")
+    con = psycopg2.connect(user="pi",dbname="pi",password="*")
     cursor = con.cursor()
     
     query = f"INSERT INTO dane (date,temp,hum,press,gas_res,cpu) VALUES (CURRENT_TIMESTAMP,{t},{p},{h},{g},{c});"
