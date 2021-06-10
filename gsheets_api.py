@@ -17,7 +17,7 @@ def push_to_google_sheets(data1,data2,data3,data4,data5,data6):
 
     # The ID and range of a sample spreadsheet.
     SAMPLE_SPREADSHEET_ID = '1mVQZs7y0SodDIHx89V-_bdP2RAwBICmPl-fXiZVs42k'
-    SAMPLE_RANGE_NAME = 'Class Data!A2:E'
+    SAMPLE_RANGE_NAME = 'Class Data!A2:F'
 
     service = build('sheets', 'v4', credentials=credentials)
 
@@ -27,7 +27,7 @@ def push_to_google_sheets(data1,data2,data3,data4,data5,data6):
     #                             range="Arkusz1!A1:E5").execute()
 
     
-    my_data_list = [[data1,data2,data3,data4]]
+    my_data_list = [[data1,data2,data3,data4,data5,data6]]
     request = sheet.values().append(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                                      range="Arkusz1!A2",
                                                      valueInputOption='USER_ENTERED',

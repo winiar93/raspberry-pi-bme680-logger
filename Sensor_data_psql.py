@@ -59,12 +59,14 @@ try:
             output = '{0:.2f} C,{1:.2f} hPa,{2:.2f} %RH'.format(
                 sensor.data.temperature,
                 sensor.data.pressure,
-                sensor.data.humidity)
+                sensor.data.humidity,
+                cpu.temperature)
 
             if sensor.data.heat_stable:
-                print('{0},{1} Ohms'.format(
+                print('{0},{1} Ohms, CPU temp {2}'.format(
                     output,
-                    sensor.data.gas_resistance))
+                    sensor.data.gas_resistance,
+                    str(cpu.temperature)))
                 insert_sensor_data(
                         sensor.data.temperature,
                         sensor.data.pressure,
