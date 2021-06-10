@@ -9,13 +9,22 @@ python 3.7.3
 Create table - sql query:
 
 CREATE TABLE dane (
+
 id BIGSERIAL NOT NULL PRIMARY KEY,
+
 date TIMESTAMP,
+
 temp REAL,
+
 press REAL,
+
 hum REAL,
+
 gas_res REAL,
+
 CPU REAL);
+
+
 
 CREATE TABLE
 
