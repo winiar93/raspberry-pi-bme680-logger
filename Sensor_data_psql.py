@@ -76,7 +76,7 @@ try:
             else:
                 print(output)
                 
-        time.sleep(5)
+        time.sleep(300)
 
 except KeyboardInterrupt:
     pass
