@@ -23,10 +23,7 @@ def push_to_google_sheets(data1,data2,data3,data4,data5,data6):
 
     # Call the Sheets API
     sheet = service.spreadsheets()
-    # result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-    #                             range="Arkusz1!A1:E5").execute()
 
-    
     my_data_list = [[data1,data2,data3,data4,data5,data6]]
     request = sheet.values().append(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                                      range="Arkusz1!A2",
