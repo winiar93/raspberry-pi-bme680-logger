@@ -1,10 +1,8 @@
 # raspberry-pi-bme680-logger
-bme 680 sensor logger based on raspberry pi 4
-with data upload to google sheets using api or
-to postgresql database
+# Bme-680 sensor logger based on raspberry pi 4 with data upload to google sheets using API or to PostgreSQL database
 
 
-python 3.7.3
+
 
 
 Create table - sql query:
@@ -28,8 +26,8 @@ CPU REAL);
 
 ```
 
-
-libs:
+### python 3.7.3
+### libs:
 - bme680
 - google.oauth2 
 - psycopg2
