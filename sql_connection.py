@@ -26,10 +26,4 @@ def insert_sensor_data(t,p,h,g,c):
     con.commit()
     cursor.close()
     
-<<<<<<< HEAD
-#insert_sensor_data(1,2,3,4,5)
 full_read_data()
-=======
-#insert_sensor_data()
-full_read_data()
->>>>>>> 430d9862a488aa13f8b4327a89e9f3778c6db6f3
