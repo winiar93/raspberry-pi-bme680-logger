@@ -6,8 +6,10 @@ to postgresql database
 
 python 3.7.3
 
+
 Create table - sql query:
 
+```
 CREATE TABLE dane (
 
 id BIGSERIAL NOT NULL PRIMARY KEY,
@@ -24,9 +26,8 @@ gas_res REAL,
 
 CPU REAL);
 
-
-
 CREATE TABLE
+```
 
 
 libs:
