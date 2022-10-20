@@ -26,7 +26,6 @@ gas_res REAL,
 
 CPU REAL);
 
-CREATE TABLE
 ```
 
 
